@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "Better Baidu",
+  "description": "This extension make you baidu better.",
+  "homepage_url": "https://github.com/Yaowenjie/better-baidu",
+  "version": "0.0.1",
+
+  "permissions": [
+    "https://www.baidu.com/"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
