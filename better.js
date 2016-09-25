@@ -6,6 +6,7 @@ $("#content_left").children().each(function() {
   if (typeof(this) !== "undefined") {
     document.styleSheets[0].insertRule('div #head {background: #f8f8f8; border-bottom: none;}', 1);
     document.styleSheets[0].insertRule('#head #form {background: white;}', 1);
+    document.styleSheets[0].insertRule('#result_logo img {mix-blend-mode: multiply;}', 1);
   }
   if ($(this).attr('class').indexOf('result') === -1) {
     $(this).each(function() {
