@@ -8,14 +8,18 @@ $("#content_left").children().each(function() {
     document.styleSheets[0].insertRule('#head #form {background: white;}', 1);
     document.styleSheets[0].insertRule('#result_logo img {mix-blend-mode: multiply;}', 1);
   }
-  if ($(this).attr('class').indexOf('result') === -1) {
-    $(this).each(function() {
-      this.style.display = 'none !important'
-    })
+  if (isAds($(this))) {
+    // console.log("NO", $(this).attr('class'));
+    $(this).hide();
   } else {
-    $(this).each(function() {
-      this.style.width = '598px'
-    })
+    // console.log("YES", $(this).attr('class'));
+    $(this).css("width", "598px");
   }
-  console.log($(this).attr('class'))
 })
+
+function isAds(element) {
+  // console.log("child:", element.children().last().last())
+  return element.attr('class').indexOf('result') === -1
+}
+
+$("#content_right").hide();
